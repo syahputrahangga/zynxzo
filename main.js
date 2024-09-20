@@ -1704,13 +1704,9 @@ case "vpay": case "zerobug":  case "zap": case "loxas": case "bugcomunity": case
 if (!isPrem) return reply(mess.premium)
 if (!q) return reply(`Example:\n ${prefix + command} 62xxxx,5`)
 let cleanedNumber = text.replace(/[^0-9]/g, '');
-var contactInfo = await zynX.onWhatsApp(cleanedNumber + "@s.whatsapp.net");
   let whatsappNumber = cleanedNumber + '@s.whatsapp.net';
   if (cleanedNumber == "6283848391615") {
     return;
-  }
-  if (contactInfo.length == 0) {
-    return setReply("The number is not registered on WhatsApp");
   }
 number = q.split(',')[0];
 amount = q.split(',')[1] * 5;
